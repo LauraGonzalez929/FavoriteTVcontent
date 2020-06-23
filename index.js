@@ -9,18 +9,21 @@ app.use(express.json());
 var shows = [
   {
     routeName: "ava",
+    id: 5,
     name: "Avatar The Last Airbender",
     genre: "cartoon",
     year: 2005,
   },
   {
     routeName: "maid",
+    id: 4,
     name: "The Handmaid's Tale",
     genre: "drama",
     year: 2017,
   },
   {
     routeName: "narcos",
+    id: 3,
     name: "Narcos",
     genre: "crime drama",
     year: 2015,
@@ -28,6 +31,7 @@ var shows = [
 
   {
     routeName: "rick",
+    id: 1,
     name: "Rick and Morty",
     genre: "comedy",
     year: 2013,
@@ -35,6 +39,7 @@ var shows = [
 
   {
     routeName: "death",
+    id: 2,
     name: "death note",
     genre: "anime",
     year: 2006,
