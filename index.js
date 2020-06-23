@@ -50,7 +50,7 @@ app.get("/", function (req, res) {
   res.send("Welcome to our tv content!");
 });
 
-app.get("/api/characters", function (req, res) {
+app.get("/api/shows", function (req, res) {
   return res.json(shows);
 });
 
