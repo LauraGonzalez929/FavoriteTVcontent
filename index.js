@@ -50,7 +50,7 @@ app.get("/", function (req, res) {
   res.send("Welcome to our tv content!");
 });
 
-app.get("/api/characters", function (req, res) {
+app.get("/api/shows", function (req, res) {
   return res.json(shows);
 });
 
@@ -68,12 +68,12 @@ app.get("/api/shows/:shows", function (req, res) {
   return res.send("No shows found");
 });
 
-app.post("/api/characters", function (req, res) {
+app.post("/api/shows", function (req, res) {
   var newShows = req.body;
 
   console.log(newShows);
 
-  characters.push(newShows);
+  shows.push(newShows);
 
   res.json(newShows);
 });
