@@ -6,7 +6,7 @@ var PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-var characters = [
+var shows = [
   {
     routeName: "ava",
     name: "Avatar The Last Airbender",
@@ -46,31 +46,31 @@ app.get("/", function (req, res) {
 });
 
 app.get("/api/characters", function (req, res) {
-  return res.json(characters);
+  return res.json(shows);
 });
 
-app.get("/api/characters/:character", function (req, res) {
-  var chosen = req.params.title;
+app.get("/api/shows/:shows", function (req, res) {
+  var chosen = req.params.shows;
 
   console.log(chosen);
 
-  for (var i = 0; i < characters.length; i++) {
-    if (chosen === characters[i].routeName) {
-      return res.json(characters[i]);
+  for (var i = 0; i < shows.length; i++) {
+    if (chosen === shows[i].routeName) {
+      return res.json(shows[i]);
     }
   }
 
-  return res.send("No content found");
+  return res.send("No shows found");
 });
 
 app.post("/api/characters", function (req, res) {
-  var newtitle = req.body;
+  var newShows = req.body;
 
-  console.log(newtitle);
+  console.log(newShows);
 
-  characters.push(newtitle);
+  characters.push(newShows);
 
-  res.json(newtitle);
+  res.json(newShows);
 });
 
 app.listen(PORT, function () {
